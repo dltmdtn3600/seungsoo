@@ -1,0 +1,26 @@
+CREATE TABLE score01(
+
+    num NUMBER(10,0) not null,
+    name VARCHAR2(30),
+    kor VARCHAR2(30),
+    eng VARCHAR2(30),
+    math VARCHAR2(30)
+);
+alter table score01 add CONSTRAINT score01_num_pk PRIMARY key(num);
+CREATE SEQUENCE score01_seq;
+
+drop table score01;
+drop SEQUENCE score01_seq;
+
+
+create table board01(
+
+    bno NUMBER(10,0) not null,
+    writer VARCHAR2(30),
+    title VARCHAR2(30),
+    content VARCHAR2(30)
+    
+);
+
+alter table board01 add CONSTRAINT board01_bno_pk PRIMARY key(bno);
+CREATE SEQUENCE board01_seq;
